@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2nd Grade English Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="app-title">2nd Grade English Practice</h1>
+        
+        <div id="categorySelection" class="category-selection">
+            <h2>Select Category</h2>
+            <div class="category-buttons">
+                <button onclick="startCategory('words')" class="category-btn">
+                    <span class="category-icon">📚</span>
+                    Words
+                </button>
+                <button onclick="startCategory('spelling')" class="category-btn">
+                    <span class="category-icon">✍️</span>
+                    Spelling
+                </button>
+                <button onclick="startCategory('speaking')" class="category-btn">
+                    <span class="category-icon">🗣️</span>
+                    Speaking
+                </button>
+            </div>
+            <button id="showScoreboard" onclick="showScoreboard()" class="scoreboard-btn">
+                Show Scoreboard
+            </button>
+        </div>
+
+        <div id="scoreboard" class="scoreboard" style="display: none;">
+            <h2>High Scores</h2>
+            <div id="scoreList" class="score-list"></div>
+            <button onclick="hideScoreboard()" class="close-btn">Close</button>
+        </div>
+
+        <div id="quizContainer" class="quiz-container" style="display: none;">
+            <div class="timer-container">
+                <div id="timer" class="timer">15</div>
+            </div>
+
+            <div class="question-container">
+                <p id="question" class="question"></p>
+                <div id="options" class="options"></div>
+            </div>
+
+            <div class="progress">
+                <p class="progress-text">
+                    Question <span id="currentQuestion">1</span> of <span id="totalQuestions">15</span>
+                </p>
+                <div class="progress-bar">
+                    <div id="progressFill" class="progress-fill"></div>
+                </div>
+                <p class="score-text">Score: <span id="currentScore">0</span></p>
+            </div>
+
+            <div class="control-buttons">
+                <button id="endGameBtn" onclick="endGame()" class="end-game-btn">End Game</button>
+                <button id="languageBtn" onclick="toggleLanguage()" class="language-btn">Türkçe'ye Çevir</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
